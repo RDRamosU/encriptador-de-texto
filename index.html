@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="reset.css">  <!-- css reset -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <!-- requisitos -->
+        <h6>Solo letras minúsculas y sin acentos</h6>
+    </header>
+
+    <!-- contenedor de las areas de entrada y salida de texto -->
+    <div class="container">
+
+        <!-- entrada de texto -->
+        <div class="text-area left">
+            <textarea id="input-text" placeholder="Ingrese el texto aqui" required></textarea>
+            <div class="buttons">
+                <button id="btnEncriptar" type="button" click="encriptar()">Encriptar</button>
+                <button id="btnDesencriptar" type="button" click="desencriptar()">Desencriptar</button>
+            </div>
+        </div>
+
+        <!-- salida de texto -->
+        <div class="text-area right">
+
+            <!-- mensaje inicial (oculto hasta obtener resultado)-->
+            <div id="output-container">
+                <img src="imagenes/mobile-search.svg" id="placeholder-img" alt="No hay texto">
+                <p id="placeholder-text">No se ha ingresado texto</p>
+            </div>
+
+            <!-- area de texto con el resultado (oculto inicialmente) -->
+            <textarea id="output-text" class="hidden"></textarea>
+
+            <!-- boton de copiar (oculto inicialmente) -->
+            <button id="btnCopiar" class="hidden">Copiar texto</button>
+
+        </div>
+
+    </div>
+
+    <!-- Enlazar las funciones de JavaScript con el documento de HTML-->
+    <script src="script.js"></script>
+
+</body>
+
+<footer>
+    <p>Ruben Dario Ramos Ulate &copy; 2025</p>
+</footer>
+
+
+</html>
